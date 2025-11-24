@@ -1,451 +1,906 @@
-# Privacy Policy for Nano Banana Pro
-
-**Last Updated:** November 23, 2025  
-**Effective Date:** November 23, 2025
-
----
-
-## Introduction
-
-Nano Banana Pro ("we," "our," or "the Extension") is a Chrome Extension that enables users to generate and edit images using Google AI API (Gemini 3 Pro Image Preview and Gemini 2.0 Flash). We are committed to protecting your privacy and being transparent about our data practices.
-
-This Privacy Policy explains what data we collect, how we use it, who we share it with, and your rights regarding your data. By installing and using Nano Banana Pro, you agree to the data practices described in this policy.
-
----
-
-## Single Purpose
-
-**The single purpose of Nano Banana Pro is:** To provide AI-powered image generation and editing capabilities using Google AI API (Gemini 3 and Gemini 2.0 Flash) by processing user-provided text prompts and images.
-
-All data collection and use is strictly limited to enabling this core functionality.
-
----
-
-## Information We Collect
-
-### 1. User-Provided Information
-
-We collect only the following information that you explicitly provide:
-
-#### a) Google AI API Key (Required)
-- **What:** Your personal Google AI API key
-- **Why:** To authenticate and access Google AI API services for image generation
-- **Storage:** Stored locally in your browser's `chrome.storage.local`
-- **Sharing:** Only sent to Google AI API (generativelanguage.googleapis.com) when you click "Generate" or "Edit" buttons
-
-#### b) Text Prompts
-- **What:** Text descriptions you enter to generate images
-- **Why:** To send to Google AI API for image generation
-- **Storage:** Not stored permanently; temporarily processed in memory
-- **Sharing:** Only sent to Google AI API when you explicitly click generation buttons
-
-#### c) Images
-- **What:** Images you upload or drag-and-drop for editing
-- **Why:** To send to Google AI API for image editing
-- **Storage:** 
-  - Uploaded images: Temporarily stored in memory only, deleted immediately after processing
-  - Generated images: Cached in browser's IndexedDB (maximum 50 recent images, automatically managed)
-- **Sharing:** Only sent to Google AI API when you explicitly click the "Edit Image" button
-
-#### d) User Settings
-- **What:** Your selected AI model preference (Gemini 3 or Gemini 2.0 Flash)
-- **Why:** To remember your preferences across sessions
-- **Storage:** Stored locally in your browser's `chrome.storage.local`
-- **Sharing:** Never shared with any party
-
-### 2. Automatically Collected Information
-
-**We do NOT collect any of the following:**
-- ❌ Browsing history or web activity
-- ❌ Personal identifiable information (name, email, phone number)
-- ❌ Location data (GPS, IP addresses)
-- ❌ Device information
-- ❌ Usage analytics or statistics
-- ❌ Cookies or tracking pixels
-- ❌ Keyboard or mouse activity outside the extension
-
----
-
-## How We Use Your Information
-
-We use the collected information **solely** for the following purposes:
-
-### Primary Use (Single Purpose)
-1. **Image Generation:** Send your text prompts to Google AI API to generate images
-2. **Image Editing:** Send your uploaded images and edit instructions to Google AI API to create edited images
-3. **Prompt Enhancement:** Use Gemini 2.0 Flash to automatically improve your prompts (optional feature)
-
-### Secondary Uses (Supporting the Single Purpose)
-4. **Settings Management:** Store your API key and model preference locally to avoid re-entry
-5. **Performance Optimization:** Cache generated images locally for quick re-access
-
-### What We DO NOT Do
-- ❌ We do NOT use your data for advertising or marketing
-- ❌ We do NOT sell your data to third parties
-- ❌ We do NOT use your data to train AI models (per Google's policy)
-- ❌ We do NOT track your behavior across websites
-- ❌ We do NOT collect data for analytics or research purposes
-
----
-
-## Data Sharing and Third-Party Services
-
-### Third Parties We Share Data With
-
-We only share your data with the following specific third parties, and only for the single purpose stated above:
-
-#### 1. Google AI API (Required)
-**Service:** Google Generative Language API  
-**Domain:** `generativelanguage.googleapis.com`  
-**Data Shared:**
-- Your API key (for authentication)
-- Text prompts (only when you click "Generate Image")
-- Uploaded images (only when you click "Edit Image")
-
-**Purpose:** To generate and edit images using AI  
-**When:** Only when you explicitly click generation/edit buttons  
-**Legal Basis:** Your explicit consent by clicking action buttons  
-**Privacy Policy:** [https://policies.google.com/privacy](https://policies.google.com/privacy)  
-
-**Important Note:** According to Google's API policy, data sent to Google AI API is NOT used for model training and is deleted after processing.
-
-#### 2. CORS Proxy (Optional)
-**Service:** AllOrigins API  
-**Domain:** `api.allorigins.win`  
-**Data Shared:**
-- Image URLs only (not image content)
-
-**Purpose:** To bypass CORS restrictions when you drag-and-drop images from websites  
-**When:** Only when you drag-and-drop web images with CORS restrictions  
-**Alternative:** You can avoid this by uploading files directly from your device  
-**Legal Basis:** Your explicit action of dragging an image
-
-### No Other Third Parties
-We do **NOT** share your data with:
-- ❌ Advertising networks
-- ❌ Analytics services (e.g., Google Analytics)
-- ❌ Marketing companies
-- ❌ Social media platforms
-- ❌ Any other third parties
-
----
-
-## Chrome Web Store Limited Use Policy Compliance
-
-This extension complies with the [Chrome Web Store User Data Privacy Policy](https://developer.chrome.com/docs/webstore/program-policies/policies#privacy_policy), including the Limited Use requirements:
-
-1. **Limited Use:** We use your data ONLY for providing the single purpose (AI image generation and editing)
-2. **No Broad Permissions:** We request only the minimum necessary host permissions
-3. **Transparency:** All data collection is disclosed in this policy and in the extension description
-4. **User Control:** You control when data is sent by explicitly clicking action buttons
-
-**Specific Compliance:**
-- ✅ We do NOT collect or use web browsing activity
-- ✅ We do NOT transfer data to third parties except as disclosed above for the single purpose
-- ✅ We do NOT use data for advertising or marketing
-- ✅ We do NOT sell user data
-
----
-
-## Data Storage and Retention
-
-### Local Storage (Your Device Only)
-The following data is stored locally in your browser and NEVER sent to our servers (we don't operate any servers):
-
-| Data Type | Storage Location | Retention Period | Deletion Method |
-|-----------|------------------|------------------|-----------------|
-| API Key | chrome.storage.local | Until you delete | Remove extension or clear settings |
-| Model Settings | chrome.storage.local | Until you delete | Remove extension |
-| Generated Images | IndexedDB | Latest 50 only | Automatic (oldest deleted when >50) or remove extension |
-
-### Temporary Processing (Memory Only)
-- Uploaded images: Deleted immediately after API processing
-- Text prompts: Not stored; processed in memory only
-
-### Third-Party Storage
-Data sent to Google AI API is governed by [Google's Privacy Policy](https://policies.google.com/privacy). According to Google, API data is not stored for model training and is deleted after processing.
-
----
-
-## Data Security
-
-We implement the following security measures:
-
-### Technical Safeguards
-- ✅ **Local Storage:** All sensitive data stored only in your browser
-- ✅ **HTTPS Encryption:** All network communications use HTTPS
-- ✅ **No Remote Code:** Extension does not load or execute remote code (Manifest V3 compliant)
-- ✅ **Minimal Permissions:** Only requests necessary Chrome permissions
-- ✅ **Sandboxed Environment:** Runs in Chrome's security sandbox
-
-### Organizational Safeguards
-- ✅ **No Central Servers:** We don't operate servers that could be breached
-- ✅ **No Data Collection:** We don't collect data that could be compromised
-- ✅ **Open Source Potential:** Code can be inspected by users
-
-### Your Responsibility
-- 🔐 Keep your Google AI API key confidential
-- 🔐 Use strong Google Account security (2FA recommended)
-- 🔐 Only install from official Chrome Web Store
-
----
-
-## Your Rights and Choices
-
-### Access Your Data
-You can access all locally stored data:
-1. API Key and Settings: Open the extension → ⚙️ API Settings section
-2. Cached Images: Open Chrome DevTools → Application → IndexedDB → NanoBananaCache
-3. Chrome Storage: Visit `chrome://settings/content` → Site settings → Chrome Extension Data
-
-### Modify Your Data
-- **API Key:** Change in extension settings anytime
-- **Model Settings:** Change in extension settings anytime
-- **Cached Images:** Download via extension or delete via Chrome DevTools
-
-### Delete Your Data
-
-**Delete All Extension Data:**
-1. Go to `chrome://extensions/`
-2. Find "Nano Banana Pro"
-3. Click "Remove"
-4. Result: All local data (API key, settings, cached images) is permanently deleted
-
-**Delete Cached Images Only:**
-1. Go to `chrome://settings/privacy/cookies`
-2. Click "See all site data and permissions"
-3. Search for "Nano Banana Pro"
-4. Click "Delete" or use Chrome DevTools → Application → IndexedDB
-
-**Request Data Deletion from Google:**
-Contact Google directly per their [Privacy Policy](https://policies.google.com/privacy) to request deletion of data sent to Google AI API.
-
-### Opt-Out Options
-- **Stop Using Extension:** Uninstall the extension anytime
-- **Stop Data Sharing:** Don't click "Generate" or "Edit" buttons
-- **Use Alternative:** Upload files directly instead of drag-and-drop to avoid CORS proxy
-
----
-
-## Children's Privacy
-
-Nano Banana Pro is not directed to children under 13 years of age. We do not knowingly collect personal information from children under 13.
-
-If you are a parent or guardian and believe your child under 13 has provided information to the extension, please contact us immediately at **jlee0724@gmail.com**. We will take steps to delete such information promptly.
-
----
-
-## International Data Transfers
-
-**Location of Data Processing:**
-- Your local data: Stored in your device's browser (your location)
-- Google AI API: Processed on Google's servers (may include United States)
-
-**Legal Basis:**
-- Your explicit consent when clicking action buttons
-- Google's compliance with GDPR and international data transfer frameworks
-
----
-
-## California Privacy Rights (CCPA)
-
-If you are a California resident, you have the following rights:
-
-### Right to Know
-You have the right to request:
-- Categories of personal information we collect: API Key, Text Prompts, Images, Settings
-- Purposes for collecting: AI image generation and editing (single purpose)
-- Third parties we share with: Google AI API, AllOrigins (optional)
-
-### Right to Delete
-You have the right to request deletion of your personal information:
-- **How:** Uninstall the extension (deletes all local data) or email jlee0724@gmail.com
-- **Timeframe:** Immediate for local data; contact Google for API data
-
-### Right to Opt-Out of Sale
-**We do NOT sell your personal information.** There is nothing to opt-out of.
-
-### Right to Non-Discrimination
-We will not discriminate against you for exercising your CCPA rights.
-
-**Contact:** jlee0724@gmail.com  
-**Response Time:** Within 45 days
-
----
-
-## GDPR Rights (European Users)
-
-If you are in the European Economic Area (EEA), you have the following rights:
-
-### Legal Basis for Processing
-| Data | Legal Basis | GDPR Article |
-|------|-------------|--------------|
-| API Key | Consent (by saving in extension) | Article 6(1)(a) |
-| Text Prompts & Images | Consent (by clicking action buttons) | Article 6(1)(a) |
-| Settings | Legitimate Interest (user convenience) | Article 6(1)(f) |
-
-### Your GDPR Rights
-
-1. **Right to Access (Article 15)**
-   - Access your data via extension settings or Chrome DevTools
-   
-2. **Right to Rectification (Article 16)**
-   - Modify API key and settings in extension anytime
-
-3. **Right to Erasure / "Right to be Forgotten" (Article 17)**
-   - Delete all data by uninstalling extension
-
-4. **Right to Restrict Processing (Article 18)**
-   - Stop using the extension (no data processing occurs without your action)
-
-5. **Right to Data Portability (Article 20)**
-   - Download generated images via extension's download button
-
-6. **Right to Object (Article 21)**
-   - Uninstall the extension to object to all processing
-
-7. **Right to Withdraw Consent (Article 7)**
-   - Stop clicking action buttons or uninstall extension
-
-**Contact:** jlee0724@gmail.com  
-**Response Time:** Within 1 month  
-**Supervisory Authority:** You may lodge a complaint with your local data protection authority
-
----
-
-## Cookies and Tracking Technologies
-
-**Nano Banana Pro does NOT use:**
-- ❌ Cookies
-- ❌ Web beacons
-- ❌ Tracking pixels
-- ❌ Fingerprinting
-- ❌ Google Analytics or similar tools
-
-We do not track your activity across websites or collect analytics data.
-
----
-
-## Changes to This Privacy Policy
-
-We may update this Privacy Policy from time to time to reflect:
-- Changes in our data practices
-- Legal or regulatory requirements
-- New features or functionality
-
-### How We Notify You
-1. **Update Date:** We will update the "Last Updated" date at the top of this policy
-2. **Chrome Web Store:** Significant changes will be noted in extension update notes
-3. **In-Extension:** Major changes may be notified via the extension interface
-
-### Your Options
-- **Continued Use = Consent:** Continuing to use the extension after changes means you accept the updated policy
-- **Disagree?** Uninstall the extension if you don't agree with changes
-
-**Recommendation:** Review this policy periodically for updates.
-
----
-
-## Data Breach Notification
-
-In the unlikely event of a data breach:
-
-1. **Assessment:** We will assess the scope and impact (within 72 hours)
-2. **Notification:** We will notify affected users via email if possible (within 72 hours for GDPR compliance)
-3. **Remediation:** We will take steps to prevent future breaches
-4. **Authorities:** We will notify relevant authorities as required by law
-
-**Note:** Since we don't operate central servers and data is stored locally, the risk of large-scale breaches is minimal.
-
----
-
-## Contact Us
-
-If you have questions, concerns, or requests regarding this Privacy Policy or your data:
-
-**Email:** jlee0724@gmail.com  
-**Chrome Web Store:** Nano Banana Pro Extension Page → Support Tab  
-**Response Time:** 
-- General inquiries: Within 7 days
-- Data deletion requests: Within 48 hours
-- GDPR/CCPA requests: Within 30-45 days as required by law
-
----
-
-## Compliance and Certifications
-
-This Privacy Policy and Nano Banana Pro comply with:
-
-- ✅ [Chrome Web Store Developer Program Policies](https://developer.chrome.com/docs/webstore/program-policies/policies)
-- ✅ [Chrome Web Store User Data Privacy Policy](https://developer.chrome.com/docs/webstore/program-policies/policies#privacy_policy)
-- ✅ Limited Use Requirements
-- ✅ General Data Protection Regulation (GDPR) - EU
-- ✅ California Consumer Privacy Act (CCPA) - USA
-- ✅ Personal Information Protection Act - South Korea
-- ✅ Manifest V3 Requirements
-
----
-
-## Definitions
-
-For clarity, we define the following terms:
-
-- **"Extension"** or **"Nano Banana Pro":** The Chrome Extension software
-- **"We," "Our," "Us":** The developers and operators of Nano Banana Pro
-- **"You," "Your":** The end user of the extension
-- **"User Data":** Any data you provide or generate using the extension
-- **"Local Storage":** Data stored only in your browser on your device
-- **"Third Party":** Any service or party other than you and us (e.g., Google AI API)
-
----
-
-## Acknowledgment and Consent
-
-By installing and using Nano Banana Pro, you acknowledge that:
-
-1. ✅ You have read and understood this Privacy Policy
-2. ✅ You consent to the collection, use, and sharing of data as described
-3. ✅ You understand that data is sent to Google AI API only when you click action buttons
-4. ✅ You are responsible for keeping your API key confidential
-5. ✅ You are at least 13 years of age (or have parental consent)
-
----
-
-## Summary
-
-**What We Collect:**
-- 🔑 Your Google AI API key (stored locally)
-- 📝 Text prompts you enter (sent to Google AI API only)
-- 🖼️ Images you upload (sent to Google AI API only)
-- ⚙️ Your settings (stored locally)
-
-**How We Use It:**
-- 🎨 To generate and edit images via Google AI API (single purpose)
-
-**Who We Share With:**
-- 🌐 Google AI API only (when you click action buttons)
-- 🔄 CORS proxy (optional, only for drag-and-drop)
-
-**Your Rights:**
-- ✅ Access, modify, or delete your data anytime
-- ✅ Uninstall extension to remove all local data
-- ✅ Exercise GDPR/CCPA rights as applicable
-
-**We Do NOT:**
-- ❌ Collect browsing history
-- ❌ Use cookies or tracking
-- ❌ Sell your data
-- ❌ Operate central servers
-- ❌ Use data for advertising
-
----
-
-**Version:** 1.0  
-**Last Reviewed:** November 23, 2025  
-**Next Review:** May 23, 2026
-
----
-
-© 2025 KDNG Nano Banana Pro. All rights reserved.  
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Nano Banana Pro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .header .dates {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            font-size: 0.9em;
+            opacity: 0.85;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        h3 {
+            color: #764ba2;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        h4 {
+            color: #555;
+            font-size: 1.1em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight-box {
+            background: #f8f9ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .success-box {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95em;
+        }
+
+        th {
+            background: #667eea;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background: #f8f9ff;
+        }
+
+        .emoji {
+            font-style: normal;
+            font-size: 1.2em;
+        }
+
+        .contact-section {
+            background: #f8f9ff;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .contact-section a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-section a:hover {
+            text-decoration: underline;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .summary-card {
+            background: #f8f9ff;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .summary-card h3 {
+            color: #667eea;
+            font-size: 1.1em;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .summary-card ul {
+            margin-left: 20px;
+        }
+
+        .footer {
+            background: #f5f5f5;
+            padding: 30px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+            border-top: 1px solid #ddd;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin: 0 5px;
+        }
+
+        .badge.success {
+            background: #28a745;
+        }
+
+        .badge.danger {
+            background: #dc3545;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                border-radius: 0;
+            }
+
+            .header {
+                padding: 30px 20px;
+            }
+
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            table {
+                font-size: 0.85em;
+            }
+
+            th, td {
+                padding: 8px;
+            }
+        }
+
+        .toc {
+            background: #f8f9ff;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .toc h2 {
+            margin-top: 0;
+            border: none;
+            padding-bottom: 0;
+        }
+
+        .toc ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .toc li {
+            margin-bottom: 10px;
+        }
+
+        .toc a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid #eee;
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🍌 Privacy Policy</h1>
+            <div class="subtitle">Nano Banana Pro - AI Image Generator</div>
+            <div class="dates">
+                <strong>Last Updated:</strong> November 23, 2025<br>
+                <strong>Effective Date:</strong> November 23, 2025
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="toc">
+                <h2>📑 Table of Contents</h2>
+                <ul>
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#single-purpose">Single Purpose</a></li>
+                    <li><a href="#information">Information We Collect</a></li>
+                    <li><a href="#how-we-use">How We Use Your Information</a></li>
+                    <li><a href="#data-sharing">Data Sharing and Third-Party Services</a></li>
+                    <li><a href="#compliance">Chrome Web Store Compliance</a></li>
+                    <li><a href="#storage">Data Storage and Retention</a></li>
+                    <li><a href="#security">Data Security</a></li>
+                    <li><a href="#your-rights">Your Rights and Choices</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <h2 id="introduction">Introduction</h2>
+            <p>Nano Banana Pro ("we," "our," or "the Extension") is a Chrome Extension that enables users to generate and edit images using Google AI API (Gemini 3 Pro Image Preview and Gemini 2.0 Flash). We are committed to protecting your privacy and being transparent about our data practices.</p>
+            <p>This Privacy Policy explains what data we collect, how we use it, who we share it with, and your rights regarding your data. By installing and using Nano Banana Pro, you agree to the data practices described in this policy.</p>
+
+            <hr>
+
+            <h2 id="single-purpose">🎯 Single Purpose</h2>
+            <div class="highlight-box">
+                <p><strong>The single purpose of Nano Banana Pro is:</strong> To provide AI-powered image generation and editing capabilities using Google AI API (Gemini 3 and Gemini 2.0 Flash) by processing user-provided text prompts and images.</p>
+                <p>All data collection and use is strictly limited to enabling this core functionality.</p>
+            </div>
+
+            <hr>
+
+            <h2 id="information">📊 Information We Collect</h2>
+
+            <h3>1. User-Provided Information</h3>
+            <p>We collect only the following information that you explicitly provide:</p>
+
+            <h4>a) Google AI API Key <span class="badge danger">Required</span></h4>
+            <ul>
+                <li><strong>What:</strong> Your personal Google AI API key</li>
+                <li><strong>Why:</strong> To authenticate and access Google AI API services for image generation</li>
+                <li><strong>Storage:</strong> Stored locally in your browser's <code>chrome.storage.local</code></li>
+                <li><strong>Sharing:</strong> Only sent to Google AI API (generativelanguage.googleapis.com) when you click "Generate" or "Edit" buttons</li>
+            </ul>
+
+            <h4>b) Text Prompts</h4>
+            <ul>
+                <li><strong>What:</strong> Text descriptions you enter to generate images</li>
+                <li><strong>Why:</strong> To send to Google AI API for image generation</li>
+                <li><strong>Storage:</strong> Not stored permanently; temporarily processed in memory</li>
+                <li><strong>Sharing:</strong> Only sent to Google AI API when you explicitly click generation buttons</li>
+            </ul>
+
+            <h4>c) Images</h4>
+            <ul>
+                <li><strong>What:</strong> Images you upload or drag-and-drop for editing</li>
+                <li><strong>Why:</strong> To send to Google AI API for image editing</li>
+                <li><strong>Storage:</strong>
+                    <ul>
+                        <li>Uploaded images: Temporarily stored in memory only, deleted immediately after processing</li>
+                        <li>Generated images: Cached in browser's IndexedDB (maximum 50 recent images, automatically managed)</li>
+                    </ul>
+                </li>
+                <li><strong>Sharing:</strong> Only sent to Google AI API when you explicitly click the "Edit Image" button</li>
+            </ul>
+
+            <h4>d) User Settings</h4>
+            <ul>
+                <li><strong>What:</strong> Your selected AI model preference (Gemini 3 or Gemini 2.0 Flash)</li>
+                <li><strong>Why:</strong> To remember your preferences across sessions</li>
+                <li><strong>Storage:</strong> Stored locally in your browser's <code>chrome.storage.local</code></li>
+                <li><strong>Sharing:</strong> Never shared with any party</li>
+            </ul>
+
+            <h3>2. Automatically Collected Information</h3>
+            <div class="warning-box">
+                <p><strong>We do NOT collect any of the following:</strong></p>
+                <ul>
+                    <li><span class="emoji">❌</span> Browsing history or web activity</li>
+                    <li><span class="emoji">❌</span> Personal identifiable information (name, email, phone number)</li>
+                    <li><span class="emoji">❌</span> Location data (GPS, IP addresses)</li>
+                    <li><span class="emoji">❌</span> Device information</li>
+                    <li><span class="emoji">❌</span> Usage analytics or statistics</li>
+                    <li><span class="emoji">❌</span> Cookies or tracking pixels</li>
+                    <li><span class="emoji">❌</span> Keyboard or mouse activity outside the extension</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <h2 id="how-we-use">🔧 How We Use Your Information</h2>
+            <p>We use the collected information <strong>solely</strong> for the following purposes:</p>
+
+            <h3>Primary Use (Single Purpose)</h3>
+            <ol>
+                <li><strong>Image Generation:</strong> Send your text prompts to Google AI API to generate images</li>
+                <li><strong>Image Editing:</strong> Send your uploaded images and edit instructions to Google AI API to create edited images</li>
+                <li><strong>Prompt Enhancement:</strong> Use Gemini 2.0 Flash to automatically improve your prompts (optional feature)</li>
+            </ol>
+
+            <h3>Secondary Uses (Supporting the Single Purpose)</h3>
+            <ol start="4">
+                <li><strong>Settings Management:</strong> Store your API key and model preference locally to avoid re-entry</li>
+                <li><strong>Performance Optimization:</strong> Cache generated images locally for quick re-access</li>
+            </ol>
+
+            <h3>What We DO NOT Do</h3>
+            <div class="warning-box">
+                <ul>
+                    <li><span class="emoji">❌</span> We do NOT use your data for advertising or marketing</li>
+                    <li><span class="emoji">❌</span> We do NOT sell your data to third parties</li>
+                    <li><span class="emoji">❌</span> We do NOT use your data to train AI models (per Google's policy)</li>
+                    <li><span class="emoji">❌</span> We do NOT track your behavior across websites</li>
+                    <li><span class="emoji">❌</span> We do NOT collect data for analytics or research purposes</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <h2 id="data-sharing">🌐 Data Sharing and Third-Party Services</h2>
+
+            <h3>Third Parties We Share Data With</h3>
+            <p>We only share your data with the following specific third parties, and only for the single purpose stated above:</p>
+
+            <h4>1. Google AI API <span class="badge danger">Required</span></h4>
+            <table>
+                <tr>
+                    <th>Service</th>
+                    <td>Google Generative Language API</td>
+                </tr>
+                <tr>
+                    <th>Domain</th>
+                    <td><code>generativelanguage.googleapis.com</code></td>
+                </tr>
+                <tr>
+                    <th>Data Shared</th>
+                    <td>
+                        • Your API key (for authentication)<br>
+                        • Text prompts (only when you click "Generate Image")<br>
+                        • Uploaded images (only when you click "Edit Image")
+                    </td>
+                </tr>
+                <tr>
+                    <th>Purpose</th>
+                    <td>To generate and edit images using AI</td>
+                </tr>
+                <tr>
+                    <th>When</th>
+                    <td>Only when you explicitly click generation/edit buttons</td>
+                </tr>
+                <tr>
+                    <th>Privacy Policy</th>
+                    <td><a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></td>
+                </tr>
+            </table>
+
+            <div class="success-box">
+                <p><strong>Important Note:</strong> According to Google's API policy, data sent to Google AI API is NOT used for model training and is deleted after processing.</p>
+            </div>
+
+            <h4>2. CORS Proxy <span class="badge">Optional</span></h4>
+            <table>
+                <tr>
+                    <th>Service</th>
+                    <td>AllOrigins API</td>
+                </tr>
+                <tr>
+                    <th>Domain</th>
+                    <td><code>api.allorigins.win</code></td>
+                </tr>
+                <tr>
+                    <th>Data Shared</th>
+                    <td>Image URLs only (not image content)</td>
+                </tr>
+                <tr>
+                    <th>Purpose</th>
+                    <td>To bypass CORS restrictions when you drag-and-drop images from websites</td>
+                </tr>
+                <tr>
+                    <th>When</th>
+                    <td>Only when you drag-and-drop web images with CORS restrictions</td>
+                </tr>
+                <tr>
+                    <th>Alternative</th>
+                    <td>You can avoid this by uploading files directly from your device</td>
+                </tr>
+            </table>
+
+            <h3>No Other Third Parties</h3>
+            <div class="warning-box">
+                <p>We do <strong>NOT</strong> share your data with:</p>
+                <ul>
+                    <li><span class="emoji">❌</span> Advertising networks</li>
+                    <li><span class="emoji">❌</span> Analytics services (e.g., Google Analytics)</li>
+                    <li><span class="emoji">❌</span> Marketing companies</li>
+                    <li><span class="emoji">❌</span> Social media platforms</li>
+                    <li><span class="emoji">❌</span> Any other third parties</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <h2 id="compliance">✅ Chrome Web Store Limited Use Policy Compliance</h2>
+            <p>This extension complies with the <a href="https://developer.chrome.com/docs/webstore/program-policies/policies#privacy_policy" target="_blank">Chrome Web Store User Data Privacy Policy</a>, including the Limited Use requirements:</p>
+
+            <div class="success-box">
+                <ol>
+                    <li><strong>Limited Use:</strong> We use your data ONLY for providing the single purpose (AI image generation and editing)</li>
+                    <li><strong>No Broad Permissions:</strong> We request only the minimum necessary host permissions</li>
+                    <li><strong>Transparency:</strong> All data collection is disclosed in this policy and in the extension description</li>
+                    <li><strong>User Control:</strong> You control when data is sent by explicitly clicking action buttons</li>
+                </ol>
+
+                <p><strong>Specific Compliance:</strong></p>
+                <ul>
+                    <li><span class="emoji">✅</span> We do NOT collect or use web browsing activity</li>
+                    <li><span class="emoji">✅</span> We do NOT transfer data to third parties except as disclosed above for the single purpose</li>
+                    <li><span class="emoji">✅</span> We do NOT use data for advertising or marketing</li>
+                    <li><span class="emoji">✅</span> We do NOT sell user data</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <h2 id="storage">💾 Data Storage and Retention</h2>
+
+            <h3>Local Storage (Your Device Only)</h3>
+            <p>The following data is stored locally in your browser and NEVER sent to our servers (we don't operate any servers):</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data Type</th>
+                        <th>Storage Location</th>
+                        <th>Retention Period</th>
+                        <th>Deletion Method</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>API Key</td>
+                        <td>chrome.storage.local</td>
+                        <td>Until you delete</td>
+                        <td>Remove extension or clear settings</td>
+                    </tr>
+                    <tr>
+                        <td>Model Settings</td>
+                        <td>chrome.storage.local</td>
+                        <td>Until you delete</td>
+                        <td>Remove extension</td>
+                    </tr>
+                    <tr>
+                        <td>Generated Images</td>
+                        <td>IndexedDB</td>
+                        <td>Latest 50 only</td>
+                        <td>Automatic (oldest deleted when >50) or remove extension</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Temporary Processing (Memory Only)</h3>
+            <ul>
+                <li><strong>Uploaded images:</strong> Deleted immediately after API processing</li>
+                <li><strong>Text prompts:</strong> Not stored; processed in memory only</li>
+            </ul>
+
+            <h3>Third-Party Storage</h3>
+            <p>Data sent to Google AI API is governed by <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>. According to Google, API data is not stored for model training and is deleted after processing.</p>
+
+            <hr>
+
+            <h2 id="security">🔒 Data Security</h2>
+            <p>We implement the following security measures:</p>
+
+            <h3>Technical Safeguards</h3>
+            <div class="success-box">
+                <ul>
+                    <li><span class="emoji">✅</span> <strong>Local Storage:</strong> All sensitive data stored only in your browser</li>
+                    <li><span class="emoji">✅</span> <strong>HTTPS Encryption:</strong> All network communications use HTTPS</li>
+                    <li><span class="emoji">✅</span> <strong>No Remote Code:</strong> Extension does not load or execute remote code (Manifest V3 compliant)</li>
+                    <li><span class="emoji">✅</span> <strong>Minimal Permissions:</strong> Only requests necessary Chrome permissions</li>
+                    <li><span class="emoji">✅</span> <strong>Sandboxed Environment:</strong> Runs in Chrome's security sandbox</li>
+                </ul>
+            </div>
+
+            <h3>Organizational Safeguards</h3>
+            <div class="success-box">
+                <ul>
+                    <li><span class="emoji">✅</span> <strong>No Central Servers:</strong> We don't operate servers that could be breached</li>
+                    <li><span class="emoji">✅</span> <strong>No Data Collection:</strong> We don't collect data that could be compromised</li>
+                    <li><span class="emoji">✅</span> <strong>Open Source Potential:</strong> Code can be inspected by users</li>
+                </ul>
+            </div>
+
+            <h3>Your Responsibility</h3>
+            <ul>
+                <li>🔐 Keep your Google AI API key confidential</li>
+                <li>🔐 Use strong Google Account security (2FA recommended)</li>
+                <li>🔐 Only install from official Chrome Web Store</li>
+            </ul>
+
+            <hr>
+
+            <h2 id="your-rights">⚖️ Your Rights and Choices</h2>
+
+            <h3>Access Your Data</h3>
+            <p>You can access all locally stored data:</p>
+            <ol>
+                <li><strong>API Key and Settings:</strong> Open the extension → ⚙️ API Settings section</li>
+                <li><strong>Cached Images:</strong> Open Chrome DevTools → Application → IndexedDB → NanoBananaCache</li>
+                <li><strong>Chrome Storage:</strong> Visit <code>chrome://settings/content</code> → Site settings → Chrome Extension Data</li>
+            </ol>
+
+            <h3>Modify Your Data</h3>
+            <ul>
+                <li><strong>API Key:</strong> Change in extension settings anytime</li>
+                <li><strong>Model Settings:</strong> Change in extension settings anytime</li>
+                <li><strong>Cached Images:</strong> Download via extension or delete via Chrome DevTools</li>
+            </ul>
+
+            <h3>Delete Your Data</h3>
+
+            <h4>Delete All Extension Data:</h4>
+            <ol>
+                <li>Go to <code>chrome://extensions/</code></li>
+                <li>Find "Nano Banana Pro"</li>
+                <li>Click "Remove"</li>
+                <li><strong>Result:</strong> All local data (API key, settings, cached images) is permanently deleted</li>
+            </ol>
+
+            <h4>Delete Cached Images Only:</h4>
+            <ol>
+                <li>Go to <code>chrome://settings/privacy/cookies</code></li>
+                <li>Click "See all site data and permissions"</li>
+                <li>Search for "Nano Banana Pro"</li>
+                <li>Click "Delete" or use Chrome DevTools → Application → IndexedDB</li>
+            </ol>
+
+            <h4>Request Data Deletion from Google:</h4>
+            <p>Contact Google directly per their <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a> to request deletion of data sent to Google AI API.</p>
+
+            <h3>Opt-Out Options</h3>
+            <ul>
+                <li><strong>Stop Using Extension:</strong> Uninstall the extension anytime</li>
+                <li><strong>Stop Data Sharing:</strong> Don't click "Generate" or "Edit" buttons</li>
+                <li><strong>Use Alternative:</strong> Upload files directly instead of drag-and-drop to avoid CORS proxy</li>
+            </ul>
+
+            <hr>
+
+            <h2>👶 Children's Privacy</h2>
+            <p>Nano Banana Pro is not directed to children under 13 years of age. We do not knowingly collect personal information from children under 13.</p>
+            <p>If you are a parent or guardian and believe your child under 13 has provided information to the extension, please contact us immediately at <strong>jlee0724@gmail.com</strong>. We will take steps to delete such information promptly.</p>
+
+            <hr>
+
+            <h2>🌍 International Data Transfers</h2>
+            <p><strong>Location of Data Processing:</strong></p>
+            <ul>
+                <li><strong>Your local data:</strong> Stored in your device's browser (your location)</li>
+                <li><strong>Google AI API:</strong> Processed on Google's servers (may include United States)</li>
+            </ul>
+
+            <p><strong>Legal Basis:</strong></p>
+            <ul>
+                <li>Your explicit consent when clicking action buttons</li>
+                <li>Google's compliance with GDPR and international data transfer frameworks</li>
+            </ul>
+
+            <hr>
+
+            <h2>📍 California Privacy Rights (CCPA)</h2>
+            <p>If you are a California resident, you have the following rights:</p>
+
+            <h3>Right to Know</h3>
+            <p>You have the right to request:</p>
+            <ul>
+                <li><strong>Categories of personal information we collect:</strong> API Key, Text Prompts, Images, Settings</li>
+                <li><strong>Purposes for collecting:</strong> AI image generation and editing (single purpose)</li>
+                <li><strong>Third parties we share with:</strong> Google AI API, AllOrigins (optional)</li>
+            </ul>
+
+            <h3>Right to Delete</h3>
+            <p>You have the right to request deletion of your personal information:</p>
+            <ul>
+                <li><strong>How:</strong> Uninstall the extension (deletes all local data) or email jlee0724@gmail.com</li>
+                <li><strong>Timeframe:</strong> Immediate for local data; contact Google for API data</li>
+            </ul>
+
+            <h3>Right to Opt-Out of Sale</h3>
+            <div class="success-box">
+                <p><strong>We do NOT sell your personal information.</strong> There is nothing to opt-out of.</p>
+            </div>
+
+            <h3>Right to Non-Discrimination</h3>
+            <p>We will not discriminate against you for exercising your CCPA rights.</p>
+
+            <p><strong>Contact:</strong> jlee0724@gmail.com<br>
+            <strong>Response Time:</strong> Within 45 days</p>
+
+            <hr>
+
+            <h2>🇪🇺 GDPR Rights (European Users)</h2>
+            <p>If you are in the European Economic Area (EEA), you have the following rights:</p>
+
+            <h3>Legal Basis for Processing</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Legal Basis</th>
+                        <th>GDPR Article</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>API Key</td>
+                        <td>Consent (by saving in extension)</td>
+                        <td>Article 6(1)(a)</td>
+                    </tr>
+                    <tr>
+                        <td>Text Prompts & Images</td>
+                        <td>Consent (by clicking action buttons)</td>
+                        <td>Article 6(1)(a)</td>
+                    </tr>
+                    <tr>
+                        <td>Settings</td>
+                        <td>Legitimate Interest (user convenience)</td>
+                        <td>Article 6(1)(f)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Your GDPR Rights</h3>
+            <ol>
+                <li><strong>Right to Access (Article 15)</strong> - Access your data via extension settings or Chrome DevTools</li>
+                <li><strong>Right to Rectification (Article 16)</strong> - Modify API key and settings in extension anytime</li>
+                <li><strong>Right to Erasure / "Right to be Forgotten" (Article 17)</strong> - Delete all data by uninstalling extension</li>
+                <li><strong>Right to Restrict Processing (Article 18)</strong> - Stop using the extension (no data processing occurs without your action)</li>
+                <li><strong>Right to Data Portability (Article 20)</strong> - Download generated images via extension's download button</li>
+                <li><strong>Right to Object (Article 21)</strong> - Uninstall the extension to object to all processing</li>
+                <li><strong>Right to Withdraw Consent (Article 7)</strong> - Stop clicking action buttons or uninstall extension</li>
+            </ol>
+
+            <p><strong>Contact:</strong> jlee0724@gmail.com<br>
+            <strong>Response Time:</strong> Within 1 month<br>
+            <strong>Supervisory Authority:</strong> You may lodge a complaint with your local data protection authority</p>
+
+            <hr>
+
+            <h2>🍪 Cookies and Tracking Technologies</h2>
+            <div class="warning-box">
+                <p><strong>Nano Banana Pro does NOT use:</strong></p>
+                <ul>
+                    <li><span class="emoji">❌</span> Cookies</li>
+                    <li><span class="emoji">❌</span> Web beacons</li>
+                    <li><span class="emoji">❌</span> Tracking pixels</li>
+                    <li><span class="emoji">❌</span> Fingerprinting</li>
+                    <li><span class="emoji">❌</span> Google Analytics or similar tools</li>
+                </ul>
+                <p>We do not track your activity across websites or collect analytics data.</p>
+            </div>
+
+            <hr>
+
+            <h2>🔄 Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time to reflect:</p>
+            <ul>
+                <li>Changes in our data practices</li>
+                <li>Legal or regulatory requirements</li>
+                <li>New features or functionality</li>
+            </ul>
+
+            <h3>How We Notify You</h3>
+            <ol>
+                <li><strong>Update Date:</strong> We will update the "Last Updated" date at the top of this policy</li>
+                <li><strong>Chrome Web Store:</strong> Significant changes will be noted in extension update notes</li>
+                <li><strong>In-Extension:</strong> Major changes may be notified via the extension interface</li>
+            </ol>
+
+            <h3>Your Options</h3>
+            <ul>
+                <li><strong>Continued Use = Consent:</strong> Continuing to use the extension after changes means you accept the updated policy</li>
+                <li><strong>Disagree?</strong> Uninstall the extension if you don't agree with changes</li>
+            </ul>
+
+            <p><strong>Recommendation:</strong> Review this policy periodically for updates.</p>
+
+            <hr>
+
+            <h2>🚨 Data Breach Notification</h2>
+            <p>In the unlikely event of a data breach:</p>
+            <ol>
+                <li><strong>Assessment:</strong> We will assess the scope and impact (within 72 hours)</li>
+                <li><strong>Notification:</strong> We will notify affected users via email if possible (within 72 hours for GDPR compliance)</li>
+                <li><strong>Remediation:</strong> We will take steps to prevent future breaches</li>
+                <li><strong>Authorities:</strong> We will notify relevant authorities as required by law</li>
+            </ol>
+
+            <div class="success-box">
+                <p><strong>Note:</strong> Since we don't operate central servers and data is stored locally, the risk of large-scale breaches is minimal.</p>
+            </div>
+
+            <hr>
+
+            <h2 id="contact">📧 Contact Us</h2>
+            <div class="contact-section">
+                <h3>Questions, Concerns, or Requests?</h3>
+                <p>If you have questions, concerns, or requests regarding this Privacy Policy or your data:</p>
+                <p><strong>📧 Email:</strong> <a href="mailto:jlee0724@gmail.com">jlee0724@gmail.com</a></p>
+                <p><strong>🌐 Chrome Web Store:</strong> Nano Banana Pro Extension Page → Support Tab</p>
+                
+                <h4>Response Times:</h4>
+                <ul style="list-style: none; margin-left: 0;">
+                    <li>⏱️ General inquiries: Within 7 days</li>
+                    <li>⚡ Data deletion requests: Within 48 hours</li>
+                    <li>⚖️ GDPR/CCPA requests: Within 30-45 days as required by law</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <h2>✅ Compliance and Certifications</h2>
+            <p>This Privacy Policy and Nano Banana Pro comply with:</p>
+            <div class="success-box">
+                <ul>
+                    <li><span class="emoji">✅</span> <a href="https://developer.chrome.com/docs/webstore/program-policies/policies" target="_blank">Chrome Web Store Developer Program Policies</a></li>
+                    <li><span class="emoji">✅</span> <a href="https://developer.chrome.com/docs/webstore/program-policies/policies#privacy_policy" target="_blank">Chrome Web Store User Data Privacy Policy</a></li>
+                    <li><span class="emoji">✅</span> Limited Use Requirements</li>
+                    <li><span class="emoji">✅</span> General Data Protection Regulation (GDPR) - EU</li>
+                    <li><span class="emoji">✅</span> California Consumer Privacy Act (CCPA) - USA</li>
+                    <li><span class="emoji">✅</span> Personal Information Protection Act - South Korea</li>
+                    <li><span class="emoji">✅</span> Manifest V3 Requirements</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <h2>📚 Summary</h2>
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <h3>What We Collect</h3>
+                    <ul>
+                        <li>🔑 Your Google AI API key (stored locally)</li>
+                        <li>📝 Text prompts you enter (sent to Google AI API only)</li>
+                        <li>🖼️ Images you upload (sent to Google AI API only)</li>
+                        <li>⚙️ Your settings (stored locally)</li>
+                    </ul>
+                </div>
+
+                <div class="summary-card">
+                    <h3>How We Use It</h3>
+                    <ul>
+                        <li>🎨 To generate and edit images via Google AI API (single purpose)</li>
+                    </ul>
+                </div>
+
+                <div class="summary-card">
+                    <h3>Who We Share With</h3>
+                    <ul>
+                        <li>🌐 Google AI API only (when you click action buttons)</li>
+                        <li>🔄 CORS proxy (optional, only for drag-and-drop)</li>
+                    </ul>
+                </div>
+
+                <div class="summary-card">
+                    <h3>Your Rights</h3>
+                    <ul>
+                        <li>✅ Access, modify, or delete your data anytime</li>
+                        <li>✅ Uninstall extension to remove all local data</li>
+                        <li>✅ Exercise GDPR/CCPA rights as applicable</li>
+                    </ul>
+                </div>
+
+                <div class="summary-card">
+                    <h3>We Do NOT</h3>
+                    <ul>
+                        <li>❌ Collect browsing history</li>
+                        <li>❌ Use cookies or tracking</li>
+                        <li>❌ Sell your data</li>
+                        <li>❌ Use data for advertising</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr>
+
+            <h2>✍️ Acknowledgment and Consent</h2>
+            <p>By installing and using Nano Banana Pro, you acknowledge that:</p>
+            <div class="highlight-box">
+                <ol>
+                    <li><span class="emoji">✅</span> You have read and understood this Privacy Policy</li>
+                    <li><span class="emoji">✅</span> You consent to the collection, use, and sharing of data as described</li>
+                    <li><span class="emoji">✅</span> You understand that data is sent to Google AI API only when you click action buttons</li>
+                    <li><span class="emoji">✅</span> You are responsible for keeping your API key confidential</li>
+                    <li><span class="emoji">✅</span> You are at least 13 years of age (or have parental consent)</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Version:</strong> 1.0 | <strong>Last Reviewed:</strong> November 23, 2025 | <strong>Next Review:</strong> May 23, 2026</p>
+            <p>© 2025 KDNG Nano Banana Pro. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
