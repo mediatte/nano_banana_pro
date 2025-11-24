@@ -1,8 +1,9 @@
 {
   "manifest_version": 3,
   "name": "Nano Banana Pro - AI 이미지 생성기",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Gemini 3로 텍스트나 이미지를 고품질 AI 이미지로 변환. 프롬프트 자동 개선 및 이미지 편집 지원",
+  "homepage_url": "https://mediatte.github.io/nano_banana_pro/privacy",
   "permissions": [
     "storage",
     "sidePanel"
@@ -26,4 +27,3 @@
     "service_worker": "background.js"
   }
 }
-
